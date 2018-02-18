@@ -1,0 +1,52 @@
+﻿#include <iostream> 
+#include <string> 
+#include <cstdio> 
+#include <vector> 
+#include <algorithm>
+#define loop(i,n) for(int i=0;i<n;i++)
+using namespace std;
+
+int ran() {
+	unsigned r = rand()*rand() + rand();
+	return r % 1000000000;
+}
+
+int main() {
+	cout << 100 << endl;
+	int n;
+	srand((int)&n);
+	loop(i, 20) {
+		n = i * 500 + 500;
+		cout << n << endl;
+		loop(j, n) {
+			int a = ran();
+			int b = ran();
+			if (a > b)swap(a, b);
+			cout << a << ' ' << b << endl;
+		}
+	}
+	loop(i, 40) {
+		n = 10000;
+		cout << n << endl;
+		loop(j, n) {
+			int a = j * 3 + 1;
+			int b = j * 3 + 2;
+			a += ran() % 10;
+			b += ran() % 10;
+			if (a > b)swap(a, b);
+			cout << a << ' ' << b << endl;
+		}
+	}
+	loop(i, 40) {
+		n = 10000;
+		cout << n << endl;
+		loop(j, n) {
+			int a = j * 30000 + 1;
+			int b = j * 30000 + 2;
+			a += ran() % 100000;
+			b += ran() % 100000;
+			if (a > b)swap(a, b);
+			cout << a << ' ' << b << endl;
+		}
+	}
+}
