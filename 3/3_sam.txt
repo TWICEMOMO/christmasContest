@@ -1,0 +1,11 @@
+﻿3
+4
+P P
+R P
+S R 
+P S
+1
+S S
+2
+P R
+R S

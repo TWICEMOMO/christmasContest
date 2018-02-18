@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string c1, c2;
+int n, k, cnt1, cnt2;
+int main()
+{
+	cin >> n;
+
+	while (n--)
+	{
+		cnt1 = 0;
+		cnt2 = 0;
+		cin >> k;
+		while (k--)
+		{
+			cin >> c1 >> c2;
+			if (c1 == "R" && c2 == "P")
+				cnt2++;
+			else if (c1 == "R" && c2 == "S")
+				cnt1++;
+			else if (c1 == "P" && c2 == "R")
+				cnt1++;
+			else if (c1 == "S" &&c2 == "R")
+				cnt2++;
+			else if (c1 == "P" && c2 == "S")
+				cnt2++;
+			else if (c1 == "S" && c2 == "P")
+				cnt1++;
+		}
+		if (cnt2 > cnt1)
+			printf("È£¿ë\n");
+		else if (cnt2 < cnt1)
+			printf("½Âºó\n");
+		else
+			cout << "DRAW" << endl;
+	}
+	return 0;
+}
