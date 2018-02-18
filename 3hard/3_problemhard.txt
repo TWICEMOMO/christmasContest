@@ -1,0 +1,32 @@
+﻿제목 : 풀리지 않는 에이치
+문제설명 : There is a Rock Paper Scissors (RPS) machine which generates Rock, Paper, or Scissors randomly. You also have a similar small Rock Paper Scissors machine. Before the game, the RPS machine will generate a list of its choice of Rock, Paper, or Scissors of the length  and your machine also will generates a list of its choice of the length . That is, you know the whole list of the RPS’s choices and you have the list of your machine’s choices. Of course, each choice of the machines is one of the three options (Rock, Paper, or Scissors). 
+ Now, you start playing Rock Paper Scissors game. In every match, you compare the list of RPS’s choice and the list of your machine’s in sequence and decide whose machine would win. However, only you may skip some RPS’s choices to find the position to get the most winning points of your machine. After you decide to start match you cannot skip the match till the end of the match. ‘R’ stands for Rock, ‘P’ stands for Paper, and ‘S’ stands for Scissors
+For example, suppose that the RPS’s list is “RSPPSSSRRPPR” and your machine’s list is “RRRR”. To get the most winning points, you should start the match after skipping three RPS’s choices or four RPS’s choices. (See Figure H.1.) Then, you can win in three matches. The draw case is not considered.  
+- Figure H.1
+RPS's Choices : RSPPSSSRRPPR
+Your machine's Choices : RRRR
+Given the list of RPS’s choices and the list of your choices, find the position to get the maximum number of wining matches. 
+ACM-ICPC Daejeon Regional에 출전한 molla_yo팀은 위에 영문으로된 문제 H를 풀기위해 생각하고있다. 
+molla_yo팀은 두시간동안 해결하지 못하자 molla_yo팀의 찬희는 서버를 해킹하여 나현이가 급하게 만든 문제로 H번을 바꾸는데 성공하였다. 
+다음은 나현이가 급하게 만든 문제이다. 
+바위는 가위를 이긴다. 가위는 보를 이긴다. 보는 바위를 이긴다. 승빈이와 호용이는 가위바위보를 한다. 판수와 스코어가 주어지면 가능한 모든 경우의 수를 출력하라. 승패 여부가 같더라도 낸게 다르다면 다른 경우의 수 이다.
+
+인풋설명
+첫째 줄에는 테스트케이스의 개수T(0<T<=1000)가 주어진다. 각 테스트케이스의 첫째 줄에는 가위바위보를 한 횟수 N(0<N<=100)이 주어진다. 다음 줄에는 A B(A+B<=N)가 주어지고, A는 승빈이의 스코어, B는 호용이의 스코어이다.
+
+아웃풋 설명
+각 T에대해 가능한 경우의 수를 1000000007로 나눈 나머지를 출력한다.
+
+인풋샘플
+3
+4
+2 1
+7
+3 4
+6
+3 3
+
+출력샘플
+호용
+DRAW
+승빈
